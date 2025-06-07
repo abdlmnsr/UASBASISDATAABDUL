@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #5cb85c;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #4cae4c;
+}
+
+.login-container, .dashboard-container, .menu-container, .about-container, .schedule-container, .exam-container, .results-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.button {
+    min-width: 120px;
+  
+    position: relative;
+    cursor: pointer;
+  
+    padding: 12px 17px;
+    border: 0;
+    border-radius: 7px;
+  
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: radial-gradient(
+      ellipse at bottom,
+      rgba(71, 81, 92, 1) 0%,
+      rgba(11, 21, 30, 1) 45%
+    );
+  
+    color: rgb(255, 255, 255, 0.66);
+  
+    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .button::before {
+    content: "";
+    width: 70%;
+    height: 1px;
+  
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+  
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.2;
+  
+    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .button:hover {
+    color: rgb(255, 255, 255, 1);
+    transform: scale(1.1) translateY(-3px);
+  }
+  
+  .button:hover::before {
+    opacity: 1;
+  }
+  
+
+.error-message {
+    color: red;
+    text-align: center;
+}
+
+.timer {
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+/* From Uiverse.io by 2009_4928 */ 
+.submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: transparent;
+  text-transform: uppercase;
+  border: 0.1vw solid rgb(50, 50, 50);
+  box-shadow:
+    0 0 0.5vw black,
+    0 0 0.5vw 0.1vw transparent,
+    0vw 0 2vw -0.5vw black,
+    0vw 0 2vw -0.5vw black,
+    0 -1vw 1vw -1vw transparent inset;
+  padding: 0.4vw 0.55vw;
+  width: 8vw;
+  height: 2vw;
+  border-radius: 0.2vw;
+  cursor: pointer;
+  text-shadow: 0.05vw 0 0 white;
+  font-size: 0.8vw;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  font-family: arial;
+  letter-spacing: 0.2vw;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.submit:after {
+  content: "next";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: transparent;
+  text-shadow: 1.8vw 1.8vw 1.2vw white;
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  letter-spacing: 5.2vw;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.submit:hover:after,
+.submit:focus:after {
+  letter-spacing: 0.28vw;
+  text-shadow: 0.08vw 0vw 0 white;
+}
+
+.submit:before {
+  content: "next";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: transparent;
+  text-shadow: 1.8vw -2vw 1.2vw white;
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  letter-spacing: 5.2vw;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.submit:hover:before,
+.submit:focus:before {
+  letter-spacing: 0.28vw;
+  text-shadow: 0.08vw 0vw 0.08vw white;
+}
+
+.submit:hover,
+.submit:focus {
+  box-shadow:
+    0 0 2vw black,
+    0 0 1.2vw 0.1vw black,
+    4vw 0 2vw -0.5vw rgb(255, 0, 105),
+    -4vw 0 2vw -0.5vw rgb(255, 0, 105),
+    0 -1vw 1vw -1vw rgb(255, 0, 105) inset;
+  -webkit-transform: scale(1.15, 1.15);
+  transform: scale(1.15, 1.15);
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 1.25vw;
+  letter-spacing: 1.28vw;
+  padding: 0.4vw 1vw;
+  text-shadow: 0 0 2vw white;
+  border-bottom: 0.1vw solid rgb(255, 0, 105);
+}
